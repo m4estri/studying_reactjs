@@ -1,24 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './style.css';
+
+
+const Body = (props) => {
+
+  return(
+    
+    <body id ="bd">
+      <hr/>
+        <h5>Welcome to the Hell {props.name}</h5>
+      <hr/>
+    </body>
+    
+    );
+
+}
+
+const Header = () => {
+return(
+  <nav id="menu">
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Produtos</a></li>
+          <li><a href="#">Missão</a></li>
+          <li><a href="#">Links</a></li>
+          <li><a href="#">Contato</a></li>
+      </ul>
+  </nav>
+ );
+}
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  return(
+    <div>
+      <Header/>
+      <Body name="Bruce Wayne" />
     </div>
   );
 }
